@@ -8,7 +8,15 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        current: "#f59e0b",
+        primary: "#f59e0b",
+        dark: "#94a3b8",
+        light_dark: "#334155",
+        salert: "#dcfce7",
+      },
+    },
   },
   plugins: [],
 };
