@@ -17,3 +17,86 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.globe-item__primary {
+  left: -10%;
+  top: -15%;
+}
+.globe-item__success {
+  bottom: -35%;
+  left: 10%;
+}
+.globe-item__warning {
+  bottom: -10%;
+  right: -15%;
+}
+.globe-item__danger {
+  right: -10%;
+  top: -15%;
+}
+.globe-item {
+  --tw-blur: blur(64px);
+  filter: blur(64px) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
+    var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia)
+    var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+.globe-item:first-child {
+  animation: blob-dcf7ee48 5s ease infinite;
+}
+.globe-item:nth-child(2) {
+  animation: blob-dcf7ee48 5s ease 1s infinite;
+}
+.globe-item:nth-child(3) {
+  animation: blob 5s ease 2s infinite;
+}
+.globe-item:nth-child(4) {
+  animation: blob 5s ease 3s infinite;
+}
+@keyframes blob {
+  0% {
+    transform: scale(1) translate(0);
+  }
+  33% {
+    transform: scale(1.1) translate(20px, 20px);
+  }
+  66% {
+    transform: scale(0.9) translate(-20px, -20px);
+  }
+  to {
+    transform: scale(1) translate(0);
+  }
+}
+
+.dark body:before {
+  background: radial-gradient(
+    75.61% 75.61% at 50% 24.39%,
+    rgba(37, 99, 235, 0.2) 0,
+    rgba(180, 83, 9, 0) 100%
+  );
+  content: "";
+}
+.bg-noise,
+.dark body:before {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+/* .bg-noise {
+  background-image: url(/public/images/noise_webp.png);
+  background-repeat: repeat;
+  background-size: 100px;
+  left: 0;
+  top: 0;
+} */
+.clientele {
+  background-attachment: fixed;
+  /* background-image: linear-gradient(rgba(0, 22, 41, 0.5), rgba(0, 3, 29, 0.5)),
+    url(./worldmap.3deedd9a.jpg); */
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

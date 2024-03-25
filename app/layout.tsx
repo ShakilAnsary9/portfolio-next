@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import noise from "@/public/images/noise_webp.png";
 
 const space = Space_Grotesk({ subsets: ["latin"] });
 
@@ -17,7 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${space.className} bg-slate-50 dark:bg-slate-800`}>
+      <body className={`${space.className} bg-slate-50 dark:bg-[#000]`}>
+        <div
+          className="bg-noise"
+          style={{
+            backgroundImage: `url(${noise.src})`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "100px",
+            left: "0",
+            top: "0",
+          }}
+        ></div>
         <Navbar />
         {children}
       </body>
