@@ -1,4 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
+import youtube from "@/public/images/youtube.gif";
+
 const HeroSection = () => {
   return (
     <section>
@@ -21,7 +24,9 @@ const HeroSection = () => {
             <div className="globe-item globe-item__danger rounded-full absolute z-10 w-[300px] h-[300px] bg-gradient-to-tr from-red-300 to-red-500"></div>
           </div>
           <div className="w-full min:h-[300px] relative rounded-2xl border-8 border-white border-opacity-30 dark:border-opacity-70 dark:border-black/30 bg-white dark:bg-gray-900 backdrop-blur bg-opacity-20 dark:bg-opacity-20 shadow-2xl dark:shadow-2xl group hover:cursor-pointer mb-12 overflow-hidden">
-            <div className="h-[380px] w-full relative"></div>
+            <div className="w-full relative">
+              <Image src={youtube} alt="youtube" className="w-full" />
+            </div>
           </div>
         </div>
       </div>
