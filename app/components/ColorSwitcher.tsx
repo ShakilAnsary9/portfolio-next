@@ -84,9 +84,9 @@ const ColorSwitcher = () => {
   });
 
   return (
-    <div className="relative">
+    <div className="relative -mb-1">
       <div
-        className="cursor-pointer switch"
+        className="cursor-pointer switch flex justify-end"
         onClick={() => setShowSwitchBox(!showSwitchBox)} // Toggle visibility of switch-box
       >
         {/* Dynamically render the icon based on the selected theme */}
