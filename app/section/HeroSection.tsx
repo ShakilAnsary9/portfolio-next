@@ -5,7 +5,7 @@ import AppButton from "../components/AppButton";
 
 const HeroSection = () => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-x-hidden">
       <div className="px-6 md:max-w-screen-md md:px-6 lg:max-w-screen-xl mx-auto py-24 h-screen md:flex items-center">
         <div className="mx-auto w-full md:w-7/12 z-20 flex flex-col gap-y-4 items-center md:items-start">
           <h1 className="text-4xl lg:text-5xl text-center md:text-left font-bold tracking-tight lg:w-11/12 dark:text-slate-50">
