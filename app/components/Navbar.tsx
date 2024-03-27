@@ -41,9 +41,13 @@ const Navbar = () => {
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span>
             {isDarkMode ? (
-              <Image src={logodark} alt="Shakil" width={120} />
+              <a href="/">
+                <Image src={logodark} alt="Shakil" width={120} />
+              </a>
             ) : (
-              <Image src={logo} alt="Shakil" width={120} />
+              <a href="/">
+                <Image src={logo} alt="Shakil" width={120} />
+              </a>
             )}
           </span>
         </a>

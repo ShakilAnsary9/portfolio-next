@@ -16,7 +16,7 @@ const HeroSection = () => {
             building functional web applications tailored to your specific
             requirements.
           </p>
-          <div className="flex my-6 gap-4 flex-wrap justify-center">
+          <div className="flex my-3 md:my-6 gap-2 md:gap-4 flex-wrap justify-center">
             <AppButton
               link=""
               className="text-white bg-current hover:bg-teal-600"
