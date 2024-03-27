@@ -95,7 +95,7 @@ const ColorSwitcher = () => {
         ></i>
       </div>
       {showSwitchBox && ( // Render switch-box only when showSwitchBox is true
-        <div className="switch-box absolute right-0 mt-10 w-40 py-2 rounded-lg bg-slate-900 flex flex-col text-slate-400">
+        <div className="switch-box absolute right-0 mt-10 w-40 py-2 rounded-lg bg-slate-200 dark:bg-slate-900 flex flex-col text-slate-700 dark:text-slate-400">
           {options?.map((opt) => (
             <button
               key={opt.text}
@@ -103,7 +103,7 @@ const ColorSwitcher = () => {
                 setTheme(opt.text);
                 setShowSwitchBox(false); // Hide switch-box when an option is clicked
               }}
-              className={`flex button-box items-center px-2 py-1 mx-3 my-1 rounded-lg hover:bg-slate-800 ${
+              className={`flex button-box items-center px-2 py-1 mx-3 my-1 rounded-lg hover:bg-slate-300  dark:hover:bg-slate-800 ${
                 theme === opt.text && "text-teal-500"
               }`}
             >
