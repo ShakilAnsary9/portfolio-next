@@ -104,7 +104,7 @@ const ColorSwitcher = () => {
                 setShowSwitchBox(false); // Hide switch-box when an option is clicked
               }}
               className={`flex button-box items-center px-2 py-1 mx-3 my-1 rounded-lg hover:bg-slate-800 ${
-                theme === opt.text && "text-sky-600"
+                theme === opt.text && "text-teal-500"
               }`}
             >
               <i className={`flex items-center fi fi-sr-${opt.icon}`}></i>
