@@ -1,6 +1,37 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import foxdark from "@/public/svg/foxflue-dark.svg";
+import foxlight from "@/public/svg/foxflue-light.svg";
+import netdark from "@/public/svg/netsqure-dark.svg";
+import netlight from "@/public/svg/netsqure-light.svg";
+import ledark from "@/public/svg/netlead-dark.svg";
+import lelight from "@/public/svg/netlead-light.svg";
 
 const AboutSection = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    // Function to check if <html> element has dark className
+    const checkDarkMode = () => {
+      const element = document.documentElement;
+      if (element.classList.contains("dark")) {
+        setIsDarkMode(true);
+      } else {
+        setIsDarkMode(false);
+      }
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="overflow-hidden">
       <div className="px-6 md:max-w-screen-md md:px-6 lg:max-w-screen-xl mx-auto">
@@ -54,17 +85,61 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-3 my-5 lg:my-10 gap-5 lg:gap-10">
-          <div className="md:col-span-2 py-5 px-10 rounded-3xl bg-white/10 text-center relative overflow-hidden">
-            <div className="z-10 text-white">
-              <h3 className="text-2xl font-bold">Trusted by Brands Globally</h3>
+          <div className="md:col-span-2 py-5 px-10 border dark:border-white/10 rounded-3xl bg-gray-100 dark:bg-white/10 text-center relative overflow-hidden">
+            <div className="z-10 h-full">
+              <h3 className="text-2xl font-bold dark:text-slate-50">
+                Trusted by Brands Globally
+              </h3>
               <p className="mt-2 text-sm dark:text-slate-500">
                 {" "}
                 Here are some organizations, I had a pleasure to work with.{" "}
               </p>
-              <Image src="" alt="" />
+              <div className="flex justify-between items-center h-[80%]">
+                <div>
+                  {isDarkMode ? (
+                    <Image src={foxdark} alt="foxdark" className="w-[200px]" />
+                  ) : (
+                    <Image
+                      src={foxlight}
+                      alt="foxlight"
+                      className="w-[200px]"
+                    />
+                  )}
+                </div>
+                <div>
+                  {isDarkMode ? (
+                    <Image
+                      src={ledark}
+                      alt="ledark"
+                      className="w-[200px] -mt-3"
+                    />
+                  ) : (
+                    <Image
+                      src={lelight}
+                      alt="lelight"
+                      className="w-[200px] -mt-3"
+                    />
+                  )}
+                </div>
+                <div>
+                  {isDarkMode ? (
+                    <Image
+                      src={netdark}
+                      alt="netdark"
+                      className="w-[200px] -mt-1"
+                    />
+                  ) : (
+                    <Image
+                      src={netlight}
+                      alt="netlight"
+                      className="w-[200px]"
+                    />
+                  )}
+                </div>
+              </div>
             </div>
           </div>
-          <div className="lg:col-span-1 py-5 px-8 text-center rounded-3xl bg-gradient-to-r from-primary-500 to-teal-500 dark:from-teal-600 dark:to-cyan-600 flex flex-col justify-center items-center text-white">
+          <div className="lg:col-span-1 py-5 px-8 text-center rounded-3xl bg-gradient-to-r from-primary-500 from-teal-600 to-cyan-600 flex flex-col justify-center items-center text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
