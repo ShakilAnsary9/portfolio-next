@@ -38,19 +38,18 @@ const Navbar = () => {
       }`}
     >
       <div className="px-6 md:max-w-screen-md md:px-6 lg:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span>
-            {isDarkMode ? (
-              <a href="/">
-                <Image src={logodark} alt="Shakil" width={120} />
-              </a>
-            ) : (
-              <a href="/">
-                <Image src={logo} alt="Shakil" width={120} />
-              </a>
-            )}
-          </span>
-        </a>
+        <span>
+          {isDarkMode ? (
+            <a href="/">
+              <Image src={logodark} alt="Shakil" width={120} />
+            </a>
+          ) : (
+            <a href="/">
+              <Image src={logo} alt="Shakil" width={120} />
+            </a>
+          )}
+        </span>
+
         <div className="items-center justify-between w-8 md:flex md:w-auto md:order-1 text-gray-800 dark:text-gray-50">
           <div>
             <Menu />
