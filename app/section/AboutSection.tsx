@@ -86,7 +86,7 @@ const AboutSection = () => {
         </div>
         <div className="grid md:grid-cols-3 my-5 lg:my-10 gap-5 lg:gap-10">
           <div className="md:col-span-2 py-5 px-10 border dark:border-white/10 rounded-3xl bg-gray-100 dark:bg-white/10 text-center relative overflow-hidden">
-            <div className="z-10 h-full">
+            <div className="z-10">
               <h3 className="text-2xl font-bold dark:text-slate-50">
                 Trusted by Brands Globally
               </h3>
@@ -94,46 +94,34 @@ const AboutSection = () => {
                 {" "}
                 Here are some organizations, I had a pleasure to work with.{" "}
               </p>
-              <div className="flex justify-between items-center h-[80%]">
-                <div>
+              <div className="flex flex-wrap gap-y-3 pt-4 justify-between items-center">
+                <div className="w-[40%] sm:w-[200px]">
                   {isDarkMode ? (
-                    <Image src={foxdark} alt="foxdark" className="w-[200px]" />
+                    <Image src={foxdark} alt="foxdark" className="" />
                   ) : (
-                    <Image
-                      src={foxlight}
-                      alt="foxlight"
-                      className="w-[200px]"
-                    />
+                    <Image src={foxlight} alt="foxlight" className="" />
                   )}
                 </div>
-                <div>
+                <div className="w-[40%] sm:w-[200px]">
                   {isDarkMode ? (
                     <Image
                       src={ledark}
                       alt="ledark"
-                      className="w-[200px] -mt-3"
+                      className="-mt-2 sm:-mt-3"
                     />
                   ) : (
                     <Image
                       src={lelight}
                       alt="lelight"
-                      className="w-[200px] -mt-3"
+                      className="-mt-2 sm:-mt-3"
                     />
                   )}
                 </div>
-                <div>
+                <div className="w-[40%] sm:w-[200px] ">
                   {isDarkMode ? (
-                    <Image
-                      src={netdark}
-                      alt="netdark"
-                      className="w-[200px] -mt-1"
-                    />
+                    <Image src={netdark} alt="netdark" className="-mt-1" />
                   ) : (
-                    <Image
-                      src={netlight}
-                      alt="netlight"
-                      className="w-[200px]"
-                    />
+                    <Image src={netlight} alt="netlight" className="-mt-1" />
                   )}
                 </div>
               </div>
