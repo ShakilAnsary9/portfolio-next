@@ -41,12 +41,7 @@ const HeroSection = () => {
           <div className="w-full min:h-[300px] relative rounded-2xl border-8 border-white border-opacity-30 dark:border-opacity-70 dark:border-black/30 bg-white dark:bg-gray-900 backdrop-blur bg-opacity-20 dark:bg-opacity-20 shadow-2xl dark:shadow-2xl group hover:cursor-pointer mb-12 overflow-hidden">
             <div className="w-full ">
               <div className="relative">
-                <Image
-                  src={youtube}
-                  alt="youtube"
-                  className="w-full"
-                  unoptimized
-                />
+                <Image src={youtube} alt="youtube" className="w-full" />
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-opacity-40 group-hover:bg-opacity-80 duration-300 backdrop-blur-[0px] group-hover:backdrop-blur-[5px] z-10">
                   <i className="fi fi-brands-youtube text-5xl opacity-0 group-hover:opacity-100 text-slate-50 transition-all duration-300 translate-y-5 group-hover:translate-y-0"></i>
                   <a
