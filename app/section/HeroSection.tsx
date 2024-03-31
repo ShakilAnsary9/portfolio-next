@@ -32,7 +32,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="w-full md:w-5/12 feature-image-box mt-5 relative">
-          <div className="globe opacity-30 lg:opacity-50">
+          <div className="globe opacity-30 lg:opacity-50 hidden sm:block">
             <div className="globe-item globe-item__primary rounded-full absolute z-10 w-[100px] h-[100px] md:w-[200px] lg:w-[400px] md:h-[200px] lg:h-[400px] lg:opacity-50 bg-gradient-to-tr from-blue-400 to-blue-600"></div>
             <div className="globe-item globe-item__warning rounded-full absolute z-10 w-24 h-24 md:w-48 md:h-48 lg:w-96 lg:h-96 lg:opacity-50 bg-gradient-to-tr from-yellow-500 to-yellow-300"></div>
             <div className="globe-item globe-item__success rounded-full absolute z-10 w-24 h-24 md:w-48 md:h-48 lg:w-96 lg:h-96 lg:opacity-50 bg-gradient-to-tr from-green-500 to-green-300"></div>
@@ -41,7 +41,12 @@ const HeroSection = () => {
           <div className="w-full min:h-[300px] relative rounded-2xl border-8 border-white border-opacity-30 dark:border-opacity-70 dark:border-black/30 bg-white dark:bg-gray-900 backdrop-blur bg-opacity-20 dark:bg-opacity-20 shadow-2xl dark:shadow-2xl group hover:cursor-pointer mb-12 overflow-hidden">
             <div className="w-full ">
               <div className="relative">
-                <Image src={youtube} alt="youtube" className="w-full" />
+                <Image
+                  src={youtube}
+                  alt="youtube"
+                  className="w-full"
+                  unoptimized
+                />
                 <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-opacity-40 group-hover:bg-opacity-80 duration-300 backdrop-blur-[0px] group-hover:backdrop-blur-[5px] z-10">
                   <i className="fi fi-brands-youtube text-5xl opacity-0 group-hover:opacity-100 text-slate-50 transition-all duration-300 translate-y-5 group-hover:translate-y-0"></i>
                   <a
