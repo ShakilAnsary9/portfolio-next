@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import youtube from "@/public/images/youtube.gif";
@@ -6,7 +7,15 @@ import AppButton from "../components/AppButton";
 const HeroSection = () => {
   return (
     <section className="overflow-x-hidden">
-      <div className="px-6 md:max-w-screen-md md:px-6 lg:max-w-screen-xl mx-auto py-24 h-screen md:flex items-center">
+      <div
+        className="px-6 md:max-w-screen-md md:px-6 lg:max-w-screen-xl mx-auto py-24 h-screen md:flex items-center"
+        onClick={() =>
+          window.open(
+            "https://www.youtube.com/@blogbracket?sub_confirmation=1",
+            "_blank"
+          )
+        }
+      >
         <div className="mx-auto w-full md:w-7/12 z-20 flex flex-col gap-y-4 items-center md:items-start">
           <h1 className="text-4xl lg:text-5xl text-center md:text-left font-bold tracking-tight lg:w-11/12 dark:text-slate-50">
             Architecting the next generation of web applications
@@ -31,6 +40,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
+
         <div className="w-full md:w-5/12 feature-image-box mt-5 relative">
           <div className="globe opacity-30 lg:opacity-50 hidden sm:block">
             <div className="globe-item globe-item__primary rounded-full absolute z-10 w-[100px] h-[100px] md:w-[200px] lg:w-[400px] md:h-[200px] lg:h-[400px] lg:opacity-50 bg-gradient-to-tr from-blue-400 to-blue-600"></div>
